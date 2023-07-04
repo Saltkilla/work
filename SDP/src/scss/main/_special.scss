@@ -1,0 +1,71 @@
+.special {
+  margin-bottom: 70px;
+
+  &__container {
+    max-width: 1920px;
+    height: 600px;
+    margin: 0 auto;
+    background: url(../img/special-img.jpg) center center/ 1920px 600px no-repeat;
+
+    @media (max-width: $breakpoint1024) {
+      background: url(../img/special-img1024.jpg) center center/ 1024px 600px no-repeat;
+    }
+    @media (max-width: $breakpoint338) {
+      background: url(../img/special-img480.jpg) center center/ 320px 210px no-repeat;
+      height: 210px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__content {
+    max-width: 508px;
+    padding-top: 150px;
+
+    @media (max-width: $breakpoint338) {
+      max-width: 187px;
+      padding-top: 30px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 49px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: #FFF;
+
+    @media (max-width: $breakpoint338) {
+      font-size: 16px;
+    }
+
+    & span {
+      font-family: 'PlayfairDisplay';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 120%;
+      color: #D5B986;
+
+      @media (max-width: $breakpoint338) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 22px 35px;
+
+    @media (max-width: $breakpoint338) {
+    display: none;
+    }
+
+    &--display {
+      display: none;
+      @media (max-width: $breakpoint338) {
+        display: block;
+        width: 98%;
+      }
+    }
+  }
+}

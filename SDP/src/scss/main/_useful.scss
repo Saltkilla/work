@@ -1,0 +1,152 @@
+.useful {
+  margin-bottom: 70px;
+
+  @media (max-width: $breakpoint480) {
+    margin-bottom: 110px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 26px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: #333;
+
+    @media (max-width: $breakpoint480) {
+      font-size: 24px;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media (max-width: $breakpoint1024) {
+      right: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      right: 61px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      top: auto;
+      bottom: -45px;
+      right: auto;
+      left: 38%;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__slide {
+    max-width: 48.75%;
+    height: auto;
+    background-color: #F7F7F7;
+    border-radius: 0px 0px 10px 10px;
+
+    @media (max-width: $breakpoint1024) {
+      max-width: 31.1%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 46.935%;
+    }
+
+    @media (max-width: $breakpoint480) {
+      max-width: 100%;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding: 456px 30px 30px 30px;
+
+    @media (max-width: $breakpoint1024) {
+      padding-top: 232px;
+    }
+  }
+
+  &__dscr {
+    margin: 0;
+    margin-bottom: 38px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #333;
+
+    @media (max-width: $breakpoint1024) {
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 22px;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+
+    @media (max-width: $breakpoint480) {
+      padding: 19px 35px;
+    }
+  }
+
+  &__prev {
+    background: none;
+    margin-right: 13px;
+  }
+
+  &__next {
+    background: none;
+  }
+}
+
+.useful__card--background1 {
+  background: url(../img/useful-img1.jpg) center top/624px 426px no-repeat;
+
+  @media (max-width: $breakpoint1024) {
+    background: url(../img/useful-img11024.png) center top/296px 202px no-repeat;
+  }
+}
+
+.useful__card--background2 {
+  background: url(../img/useful-img2.jpg) center top/624px 426px no-repeat;
+
+  @media (max-width: $breakpoint1024) {
+    background: url(../img/useful-img21024.png) center top/296px 202px no-repeat;
+  }
+}
+
+.useful__card--background3 {
+  background: url(../img/useful-img3.jpg) center top/624px 426px no-repeat;
+
+  @media (max-width: $breakpoint1024) {
+    background: url(../img/useful-img31024.png) center top/296px 202px no-repeat;
+  }
+}
+
+.useful__card--background4 {
+  background: url(../img/useful-img4.jpg) center top/624px 426px no-repeat;
+
+  @media (max-width: $breakpoint1024) {
+    background: url(../img/useful-img41024.png) center top/296px 202px no-repeat;
+  }
+}
+
+.useful__card--background5 {
+  background: url(../img/useful-img5.jpg) center top/624px 426px no-repeat;
+
+  @media (max-width: $breakpoint1024) {
+    background: url(../img/useful-img51024.png) center top/296px 202px no-repeat;
+  }
+}

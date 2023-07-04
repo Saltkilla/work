@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script defer src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer src="https://unpkg.com/tippy.js@6"></script>
+    <script defer src="./script/main.js"></script>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__link">
+                <img src="./img/logo.png" alt="Логотип" class="header__logo">
+            </a>
+            <div class="search-wrap">
+                <input type="text" class="header__search" placeholder="Введите запрос" autocomplete="off">
+                <ul class="list-reset autocomplete-list">
+                </ul>
+            </div>
+            <img src="./img/search.png" alt="Поиск" class="header__icon">
+            <svg class="header__close" width="29" height="29" viewBox="0 0 29 29">
+                <use xlink:href="./img/sprite.svg#close"></use>
+            </svg>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <div class="mask">
+            <div class="loader"></div>
+        </div>
+
+        <div class="container">
+            <h1 class="main__title">Клиенты</h1>
+
+            <ul class="list-reset line">
+                <li class="line__item line__item--width1 line__item--margin-first">
+                    <h2 id="sort-id" data-sort='true' class="line__title line__title--purple line__title--up-arrow"
+                        tabindex="0">ID</h2>
+                </li>
+                <li class="line__item line__item--width2">
+                    <h2 id="sort-name" data-sort='false' class="line__title line__title--down-arrow line__title--width1"
+                        tabindex="0">Фамилия Имя
+                        Отчество</h2>
+                    <p class="line__alphabet">А-Я</p>
+                </li>
+                <li class="line__item line__item--width3">
+                    <h2 id="sort-create" data-sort='true'
+                        class="line__title line__title--position line__title--width line__title--width2 line__title--up-arrow"
+                        tabindex="0">Дата и время создания</h2>
+                </li>
+                <li class="line__item line__item--width4">
+                    <h2 id="sort-update" data-sort='false'
+                        class="line__title line__title--position line__title--width line__title--width3  line__title--down-arrow"
+                        tabindex="0">Последние изменения</h2>
+                </li>
+                <li class="line__item line__item--width5">
+                    <h2 class="line__title" tabindex="0">Контакты</h2>
+                </li>
+                <li class="line__item line__item--margin-last">
+                    <h2 class="line__title" tabindex="0">Действия</h2>
+                </li>
+            </ul>
+
+            <ul class="list-reset user">
+                <li class="button-container">
+                    <button class="main__add btn-reset">Добавить клиента</button>
+                </li>
+            </ul>
+
+
+            <div class="wrraper form" id="change-client-form-wrraper">
+                <div class="modal modal-change">
+                    <h3 class="form__title">Изменить данные <span class="form__id">ID: 123458</span></h3>
+                    <svg class="form__close" id="change-client-close" width="29" height="29" viewBox="0 0 29 29">
+                        <use xlink:href="./img/sprite.svg#close"></use>
+                    </svg>
+                    <form action="" class="form__general" id="change-client-form">
+                        <label class="form__label" for="change-surname">
+                            <p class="form__label-dscr">Фамилия <span>*</span></p>
+                            <input type="text" data-surname="true"
+                                class="form__input form__validation form__input--change remove-error-change"
+                                id="change-surname">
+                        </label>
+                        <label class="form__label" for="change-name">
+                            <p class="form__label-dscr">Имя<span>*</span></p>
+                            <input type="text" data-name="true"
+                                class="form__input form__validation form__input--change remove-error-change"
+                                id="change-name">
+                        </label>
+                        <label class="form__label" for="change-lastname">
+                            <p class="form__label-dscr">Отчество <span>*</span></p>
+                            <input type="text" class="form__input form__input--change" id="change-lastname">
+                        </label>
+                        <div class="form__contacts">
+                            <div class="form__add">
+                                <svg class="form__add-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <use xlink:href="./img/sprite.svg#addContact"></use>
+                                </svg>
+                                <button class="btn-reset form__add-contact">Добавить контакт</button>
+                            </div>
+                        </div>
+                        <div class="form__buttons">
+                            <button type="submit" class="form__btn-save btn-reset btn-purple">Сохранить</button>
+                            <button class="form__btn-delete btn-reset action">Удалить клиента</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="wrraper form" id="new-client-form-wrraper">
+                <div class="modal modal-new">
+                    <h3 class="form__title">Новый клиент</h3>
+                    <svg class="form__close new-client-close" width="29" height="29" viewBox="0 0 29 29">
+                        <use xlink:href="./img/sprite.svg#close"></use>
+                    </svg>
+                    <form action="" class="form__general" id="new-client-form">
+                        <label class="form__label" for="add-surname">
+                            <input type="text" data-surname="true"
+                                class="form__input form__validation form__input--add remove-error-add" id="add-surname"
+                                placeholder="Фамилия*">
+                        </label>
+                        <label class="form__label" for="add-name">
+                            <input type="text" data-name="true"
+                                class="form__input form__validation form__input--add remove-error-add" id="add-name"
+                                placeholder="Имя*">
+                        </label>
+                        <label class="form__label" for="add-lastname">
+                            <input type="text" class="form__input form__input--add" id="add-lastname"
+                                placeholder="Отчество">
+                        </label>
+                        <div class="form__contacts">
+                            <div class="form__add">
+                                <svg class="form__add-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <use xlink:href="./img/sprite.svg#addContact"></use>
+                                </svg>
+                                <button class="btn-reset form__add-contact">Добавить контакт</button>
+                            </div>
+                        </div>
+                        <div class="form__buttons">
+                            <button type="submit" class="form__btn-add btn-reset btn-purple">Добавить</button>
+                            <button class="form__btn-cancell btn-reset action new-client-close">Отмена</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="wrraper delete">
+                <div class="modal modal-delete">
+                    <h3 class="delete__title">Удалить клиента</h3>
+                    <svg class="form__close delete-close" width="29" height="29" viewBox="0 0 29 29">
+                        <use xlink:href="./img/sprite.svg#close"></use>
+                    </svg>
+                    <p class="delete__dscr">Вы действительно хотите удалить данного клиента?</p>
+                    <button class="delete__btn btn-reset btn-purple">Удалить</button>
+                    <button class="delete__btn-cancell btn-reset action delete-close">Отмена</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+</body>
+
+</html>

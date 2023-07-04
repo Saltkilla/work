@@ -1,0 +1,192 @@
+.contact {
+  margin-bottom: 70px;
+
+
+  @media (max-width: $breakpoint480) {
+    margin-bottom: 45px;
+  }
+
+  &__container {
+    background: url(../img/contact-img.svg) top 25px right/624px 383px no-repeat;
+    padding-right: 656px;
+
+    @media (max-width: $breakpoint1024) {
+      padding-right: 546px;
+      background-size: 514px 316px;
+      background-position: top 77px right 30px;
+    }
+
+    @media (max-width: $breakpoint950) {
+      background-size: 420px 230px;
+      background-position: top 110px right 30px;
+      padding-right: 452px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      background: url(../img/contact-img768.svg) top 10px right 60px/187px 444px no-repeat;
+    }
+
+    @media (max-width: $breakpoint670) {
+      background: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: #333;
+
+    @media (max-width: $breakpoint480) {
+      font-size: 24px;
+      line-height: 100%;
+    }
+  }
+
+  &__dscr {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #666;
+
+    @media (max-width: $breakpoint1024) {
+      max-width: 405px;
+    }
+
+    @media (max-width: $breakpoint670) {
+      max-width: 100%;
+    }
+  }
+
+  &__tooltip {
+    fill: #FF862F;
+    transition: fill .2s ease-in-out;
+
+    &:focus {
+      fill: black;
+      outline: none;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: $breakpoint670) {
+      max-width: 100%;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #A65CF0;
+    text-decoration: underline;
+  }
+
+  &__agreement {
+    padding-left: 22px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333;
+  }
+
+}
+
+.form {
+  max-width: 100%;
+
+  @media (max-width: $breakpoint1024) {
+    max-width: 405px;
+  }
+
+  &__label {
+    width: 100%;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 7px 18px;
+    background-color: #F7F7F7;
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    color: #333333;
+
+    &:focus {
+      outline: 2px solid #A65CF0;
+      background-color: #F8EFFF;
+    }
+
+    &:hover {
+      background-color: #EAEAEA;
+    }
+
+    &:active {
+      background-color: #F7F7F7;
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 40px;
+      color: #999999;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 13px;
+    padding: 20px 35px;
+  }
+}
+
+.checkbox+.contact__custom-checkbox {
+  width: 14px;
+  height: 14px;
+  top: 3px;
+}
+
+.tippy-box[data-theme~='black'] {
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 14px;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  width: 200px;
+  top: -15px;
+  left: 19px;
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.just-validate-success-field {
+  outline: 1px solid #B8EC64;
+}
+
+.just-validate-error-field {
+  outline: 1px solid red;
+}

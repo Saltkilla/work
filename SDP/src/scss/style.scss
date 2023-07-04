@@ -1,0 +1,24 @@
+// Libs
+@import './libs/_swiper';
+@import './libs/_nouislider';
+
+// Global SCSS-files imports
+@import './_vars';
+@import './_reset';
+@import './_global';
+@import './_fonts';
+
+// Sections or Pages SCSS-files imports
+@import './_header';
+@import './_footer';
+@import './main/_hero';
+@import './main/_offer';
+@import './main/_rating';
+@import './main/_special';
+@import './main/_top';
+@import './main/_useful';
+@import './main/_contact';
+@import './_catalog';
+@import './_product';
+
+

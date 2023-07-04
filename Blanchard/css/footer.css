@@ -1,0 +1,36 @@
+.footer {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 45px 0;
+  background-color: #000;
+}
+
+.footer__container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer__img {
+  fill: #CACACA;
+  transition: fill .2s ease-in-out;
+}
+
+.footer__link:focus {
+  outline: none;
+}
+
+.footer__link:focus .footer__img {
+  fill: #FFF;
+}
+
+.footer__img:hover {
+  fill: #FFF;
+}
+
+.footer__link:active .footer__img {
+  fill: #9D5CD0;
+}

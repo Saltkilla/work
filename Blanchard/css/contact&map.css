@@ -1,0 +1,148 @@
+.contact {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.contact__container {
+  align-items: center;
+  justify-content: space-between;
+  padding: 45px 0 38px 0;
+}
+
+.contact__container::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CACACA;
+}
+
+.contact__container::after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CACACA;
+}
+
+.contact__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333;
+}
+
+.contact__address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #333;
+}
+
+.form__input {
+  width: 100%;
+  padding: 9px 24px;
+  padding-right: 43px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.form__label {
+  margin-right: 20px;
+  max-width: 270px;
+}
+
+.form__input:focus {
+  background-color: #ECECEC;
+}
+
+.form__input:hover {
+  background-color: #ECECEC;
+}
+
+.form__btn {
+  padding: 12px 35px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #9D5CD0;
+  border: 2px solid #9D5CD0;
+  border-radius: 100px;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.contact__social:not(:last-child) {
+  margin-right: 16px;
+}
+
+.contact__social:focus {
+  outline: none;
+}
+
+.contact__social:focus .contact__img {
+  opacity: .5;
+}
+
+.contact__img:hover {
+  opacity: .5;
+}
+
+.contact__img:active .social-elipse {
+  stroke: #9D5CD0;
+}
+
+.form__btn:focus {
+  outline: 2px solid #9D5CD0;
+  outline-offset: 3px;
+}
+
+.form__btn:hover {
+  background-color: #9D5CD0;
+  color: #FFF;
+}
+
+.form__btn:active {
+  background-color: #7943A4;
+  color: #FFF;
+  border-color: #9D5CD0;
+}
+
+.form__label {
+  position: relative;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+.just-validate-error-field {
+  border-color: #D11616;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.map {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.map__container {
+  max-width: 1920px;
+  min-height: 700px;
+}

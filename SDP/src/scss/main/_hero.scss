@@ -1,0 +1,167 @@
+.hero {
+  padding-top: 11px;
+  margin-bottom: 70px;
+
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 68px;
+  }
+
+  &__container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  &__slider {
+    max-width: 100%;
+    position: relative;
+
+    @media (max-width: $breakpoint480) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__wrapper {
+    max-height: 100%;
+  }
+
+  &__slide {
+    max-width: 100%;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__content {
+    max-width: 496px;
+    padding-top: 80px;
+    z-index: 1;
+
+    @media (max-width: $breakpoint480) {
+      max-width: 220px;
+      padding-top: 30px;
+      padding-left: 20px;
+    }
+  }
+
+  &__content--width {
+    max-width: 587px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 49px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: #999999;
+
+    @media (max-width: $breakpoint480) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  &__btn {
+
+    @media (max-width: $breakpoint480) {
+      display: none;
+    }
+  }
+
+  &__title--white {
+    color: #FFF;
+  }
+}
+
+.hero__slider .hero__pagination {
+  position: absolute;
+  max-width: 100px;
+  bottom: 20px;
+  left: 48%;
+  z-index: 1;
+
+  @media (max-width: $breakpoint1024) {
+    left: 46%;
+  }
+
+  @media (max-width: $breakpoint480) {
+    left: 43%;
+  }
+}
+
+.hero__slider .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background: #333;
+  opacity: 0.3;
+
+  @media (max-width: $breakpoint480) {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.hero__slider .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+
+.hero__slide--background1 {
+  height: 400px;
+  background: url(../img/hero-img1.jpg) center center/ 1920px 400px no-repeat;
+
+  @media (max-width: $breakpoint1024) {
+    background: url(../img/hero-img11024.jpg) center center/ 1024px 400px no-repeat;
+  }
+  @media (max-width: $breakpoint768) {
+    background: url(../img/hero-img1768.jpg) center center/ 768px 400px no-repeat;
+  }
+  @media (max-width: $breakpoint338) {
+    background: url(../img/hero-img1480.jpg) center center/ 320px 210px no-repeat;
+    height: 210px;
+  }
+}
+
+.hero__slide--background2 {
+  height: 400px;
+  background: url(../img/hero-img2.jpg) center center/ 1920px 400px no-repeat;
+
+  @media (max-width: $breakpoint1024) {
+    background: url(../img/hero-img21024.jpg) center center/ 1024px 400px no-repeat;
+  }
+  @media (max-width: $breakpoint768) {
+    background: url(../img/hero-img2768.jpg) center center/ 768px 400px no-repeat;
+  }
+  @media (max-width: $breakpoint338) {
+    background: url(../img/hero-img2480.jpg) center center/ 320px 210px no-repeat;
+    height: 210px;
+  }
+}
+
+.hero__slide--background3 {
+  height: 400px;
+  background: url(../img/hero-img3.jpg) center center/ 1920px 400px no-repeat;
+
+  @media (max-width: $breakpoint1024) {
+    background: url(../img/hero-img31024.jpg) center center/ 1024px 400px no-repeat;
+  }
+  @media (max-width: $breakpoint768) {
+    background: url(../img/hero-img3768.jpg) center center/ 768px 400px no-repeat;
+  }
+  @media (max-width: $breakpoint338) {
+    background: url(../img/hero-img3480.jpg) center center/ 320px 210px no-repeat;
+    height: 210px;
+  }
+}
+
+
+.hero__btn-display {
+  display: none;
+
+  @media (max-width: $breakpoint480) {
+    display: inline;
+    width: 95%;
+  }
+}

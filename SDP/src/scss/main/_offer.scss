@@ -1,0 +1,250 @@
+.offer {
+  margin-bottom: 70px;
+
+  @media (max-width: $breakpoint480) {
+    margin-bottom: 128px;
+  }
+
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 26px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: #333;
+
+    @media (max-width: $breakpoint480) {
+      font-size: 24px;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @media (max-width: $breakpoint1024) {
+      right: 30px;
+    }
+    @media (max-width: $breakpoint768) {
+      right: 60px;
+    }
+
+    @media (max-width: $breakpoint670) {
+      top: auto;
+      bottom: -56px;
+      left: 38%;
+    }
+  }
+
+  &__prev {
+    background: none;
+    margin-right: 13px;
+  }
+
+  &__next {
+    background: none;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__slide {
+    max-width: 23.125%;
+    height: auto;
+
+    @media (max-width: $breakpoint1024) {
+      max-width: 31.1%;
+    }
+    @media (max-width: $breakpoint768) {
+      max-width: 46.935%;
+    }
+
+    @media (max-width: $breakpoint670) {
+      max-width: 100%;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  &__img {
+    text-align: center;
+
+    @media (max-width: $breakpoint1155) {
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-right: 41px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    margin-top: auto;
+
+    @media (max-width: $breakpoint1155) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (max-width: $breakpoint1024) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    left: 0;
+    top: 30px;
+  }
+
+  &__scheme {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+
+    @media (max-width: $breakpoint1024) {
+      display: none;
+    }
+  }
+
+  &__price {
+    display: flex;
+  }
+
+  &__new-price {
+    display: inline;
+    margin-right: 30px;
+    margin-bottom: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: #FF862F;
+
+    @media (max-width: $breakpoint1155) {
+      margin-right: 15px;
+    }
+  }
+
+  &__old-price {
+    display: inline;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #999;
+  }
+}
+
+.offer__slide--width{
+  max-width: 48.75%;
+
+  @media (max-width: $breakpoint1024) {
+    max-width: 31.1%;
+  }
+  @media (max-width: $breakpoint768) {
+    max-width: 46.835%;
+  }
+}
+
+
+.offer__img1 {
+  padding-top: 72px;
+  padding-right: 52px;
+  padding-left: 51px;
+
+  @media (max-width: $breakpoint1155) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.offer__img2 {
+  padding-top: 37px;
+  padding-right: 84px;
+  padding-left: 90px;
+
+  @media (max-width: $breakpoint1155) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (max-width: $breakpoint1024) {
+    width: 254px;
+    padding-top: 112px;
+  }
+}
+
+.offer__img3 {
+  padding-top: 64px;
+  padding-right: 73px;
+  padding-left: 74px;
+
+  @media (max-width: $breakpoint1155) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.offer__img4 {
+  padding-top: 72px;
+  padding-right: 90px;
+  padding-left: 89px;
+
+  @media (max-width: $breakpoint1155) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.offer__img5 {
+  padding-top: 59px;
+  padding-right: 81px;
+  padding-left: 80px;
+
+  @media (max-width: $breakpoint1155) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (max-width: $breakpoint1024) {
+    width: 254px;
+    padding-top: 120px;
+  }
+}
+
+.offer__img6 {
+  padding-top: 64px;
+  padding-right: 57px;
+  padding-left: 56px;
+
+  @media (max-width: $breakpoint1155) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.title-size {
+  @media (max-width: $breakpoint480) {
+    font-size: 24px;
+  }
+}
+
+.outline-padding {
+  @media (max-width: $breakpoint480) {
+    padding: 16px 35px;
+  }
+}

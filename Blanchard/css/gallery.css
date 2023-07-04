@@ -1,0 +1,365 @@
+.gallery {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: url(../img/gallery-backgroundimg.jpg) center center/ cover no-repeat;
+}
+
+.gallery__container {
+  margin-bottom: 80px;
+  padding: 80px 0 75px 12px;
+}
+
+.gallery__left {
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+.gallery__select {
+  margin-bottom: 176px;
+}
+
+.gallery__title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+  color: #FFF;
+}
+
+.select__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFF;
+}
+
+.choices__inner {
+  width: 400px;
+  padding: 3px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 6px;
+  background-color: transparent
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices[data-type*=select-one]::after {
+  width: 7px;
+  height: 7px;
+  top: 41%;
+  right: 20px;
+  border: none;
+  border-bottom: 2px solid #FFF;
+  border-right: 2px solid #FFF;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  width: 7px;
+  height: 7px;
+  top: 65%;
+  right: 20px;
+  border: none;
+  border-bottom: 2px solid #FFF;
+  border-right: 2px solid #FFF;
+  transform: rotate(225deg);
+  z-index: 3;
+}
+
+#choices--customSelect-item-choice-1 {
+  display: none;
+}
+
+.choices__list--dropdown .choices__item--selectable::after,
+.choices__list[aria-expanded] .choices__item--selectable::after {
+  display: none;
+}
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+.choices__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #999;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFF;
+}
+
+.choices:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.choices:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.gallery__checkbox {
+  flex-direction: column;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  position: relative;
+  padding-left: 28px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.checkbox-text+.custom-checkbox {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  border: 1px solid #FFF;
+  transition: border-color .2s ease-in-out;
+}
+
+.checkbox-text+.custom-checkbox::before {
+  content: url("../img/gallery-checkboximg.svg");
+  position: absolute;
+  top: -14px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.checkbox:checked+.checkbox-text+.custom-checkbox::before {
+  opacity: 1;
+}
+
+.checkbox:checked+.checkbox-text+.custom-checkbox {
+  border-color: #C283F3;
+}
+
+.checkbox:checked+.checkbox-text {
+  color: #C283F3;
+}
+
+.checkbox-text:hover+.custom-checkbox {
+  border-color: #C283F3;
+}
+
+.label:focus {
+  outline: none;
+}
+
+.label:focus .custom-checkbox {
+  border-color: #C283F3;
+}
+
+.label:focus .checkbox-text {
+  color: #C283F3;
+}
+
+.checkbox-text {
+  transition: color .2s ease-in-out;
+}
+
+.gallery__slider {
+  flex-direction: column;
+  width: 71.875%;
+  padding-top: 25px;
+  overflow: hidden;
+}
+
+.gallery__slide {
+  max-width: 30.4347826087%;
+}
+
+.swiper__navigation {
+  max-width: 130px;
+  margin-bottom: 30px;
+}
+
+.gallery-pagination {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.gallery__slide:hover::before {
+	content: "";
+  position: absolute;
+	display: block;
+	width: 85.7142857143%;
+	height: 85.7142857143%;
+	top: 7.14285714286%;
+	left: 7.14285714286%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.gallery__slide:hover::after {
+	content: url(../img/gallery-zoomimg.svg);
+  position: absolute;
+	display: block;
+	top: 37.1428571429%;
+	left: 35.7142857143%;
+}
+
+.gallery__slide:active::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
+}
+
+.gallery__button {
+  fill: #666;
+  stroke: #FFF;
+}
+
+.gallery__button--elipse {
+  stroke: #000;
+}
+
+.gallery-button-next:focus {
+  outline: none;
+}
+
+.gallery-button-next:focus .gallery__button--elipse{
+  stroke: #FFF;
+}
+
+.gallery-button-prev:focus {
+  outline: none;
+}
+
+.gallery-button-prev:focus .gallery__button--elipse{
+  stroke: #FFF;
+}
+
+.gallery__button:hover {
+  fill: #9D5CD0;
+}
+
+.gallery__button:active {
+  fill: #7943A4;
+}
+
+.modal__overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal {
+  position: relative;
+  max-width: 47%;
+  max-height: 500px;
+  display: none;
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
+}
+
+.modal-img--container {
+  width: 195%;
+}
+
+.modal-img {
+  height: 100%;
+}
+
+.modal__content {
+  padding: 121px 50px 121px 50px;
+  background-color: #FFF;
+}
+
+.modal__creator {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #333;
+}
+
+.modal__picture {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+}
+
+.modal__period {
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #999;
+}
+
+.modal__dscr {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal__overlay--visible {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal--visible {
+	display: flex;
+}
